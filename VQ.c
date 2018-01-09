@@ -99,6 +99,9 @@ void train(int numberOfPoints, int NumberOfClusters)
             prototypesX[currentWinner] += eta * (X[helpingArray[point]] - prototypesX[currentWinner]); // helpingArray[point] um zufälligen wert zu nehemn
             prototypesY[currentWinner] += eta * (Y[helpingArray[point]] - prototypesY[currentWinner]);
         }
+
+        prototypesX_last = prototypesX;
+        prototypesY_last = prototypesY;
     }
     while(fabs(prototypesX_last- prototypesX) > threshold || fabs(prototypesY_last- prototypesY) > threshold );
 
