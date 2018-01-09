@@ -52,7 +52,7 @@ double randomvalue(double maxrandom) // Generiert random float Werte in vorgegeb
     return maxrandom*((double)rand()/(double)RAND_MAX-0.5); // maxrandom = 2 ist Bereich -1...1
 }
 
-double euclideanDistance(double X1, double X2, double Y1, double Y2)
+double euclideanDistance(double X1, double X2, double Y1, double Y2) // Funktion um die Eukildische Distanz zweier 2D-Vektoren zu finden
 {
     double distance = 0;
 
@@ -71,7 +71,7 @@ int findWinner(int numberOfPoints, int NumberOfClusters, int point)
         distance = euclideanDistance(X[point], prototypesX[center], Y[point], prototypesY[center]);
         if(distance < mindistance)
         {
-            mindistance = distance;
+            mindistance = distance; // finde den aktuellen Gewinner
             currentWinner = center;
         }
     }
@@ -147,7 +147,7 @@ int main()
         X[k] = X[k]/max_X;
         Y[k] = Y[k]/max_Y;
     }
-
+    /* allokiere speicher für die Prototype Gewichte in der Länge des inputs*/
     prototypesX = calloc(NumberOfClusters, sizeof(double));
     prototypesY = calloc(NumberOfClusters, sizeof(double));
     /* Initialize the prototypes with random values*/
