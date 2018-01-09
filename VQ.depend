@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1515497556 source:c:\users\dennis\documents\01_master\computational intelligence\vq\vq.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+	<string.h>
+
